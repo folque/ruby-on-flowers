@@ -3,11 +3,10 @@ require 'spec_helper'
 describe "Static pages" do
   
   describe "Home page" do
-    
-    it "shouldn't have the content 'Home'" do
-      visit root_path
-      expect(page).to have_content('Ruby On Flowers')
-      expect(page).not_to have_title('| Home')
+    before {visit root_path}
+    subject {page}
+    it {should have_content('RubyOnFlowers')}
+    it {should_not have_content(' | Home')}
     end
   end
   

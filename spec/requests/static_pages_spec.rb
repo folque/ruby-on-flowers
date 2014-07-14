@@ -5,7 +5,7 @@ describe "Static pages" do
   describe "Home page" do
     
     it "shouldn't have the content 'Home'" do
-      visit '/static_pages/home'
+      visit root_path
       expect(page).to have_content('Ruby On Flowers')
       expect(page).not_to have_title('| Home')
     end
@@ -13,7 +13,7 @@ describe "Static pages" do
   
   describe "Help page" do
     it "should have the content 'Help'" do
-      visit '/static_pages/help'
+      visit help_path
       expect(page).to have_content('Help')
       expect(page).to have_title('| Help')
     end
@@ -21,7 +21,7 @@ describe "Static pages" do
   
   describe "About page" do
     it "should have the content 'About us'" do
-      visit '/static_pages/about'
+      visit about_path
       expect(page).to have_content('About us')
       expect(page).to have_title('| About')
     end
@@ -29,7 +29,7 @@ describe "Static pages" do
 
   describe "Contact page" do
     it "should have the content 'Contact'" do
-      visit '/static_pages/contact'
+      visit contact_path
       expect(page).to have_title('| Contact')
     end
   end

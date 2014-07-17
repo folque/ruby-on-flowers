@@ -2,13 +2,12 @@ require 'spec_helper'
 
 describe "Static pages" do
   
-  describe "Home page" do
-    before {visit root_path}
-    subject {page}
-    it {should have_content('RubyOnFlowers')}
-    it {should_not have_content(' | Home')}
-    end
-  end
+#  describe "Home page" do
+#    before {visit root_path}
+#    subject {page}
+#    it {should have_content('RubyOnFlowers')}
+#    it {should_not have_content(' | Home')}
+#    end
   
   describe "Help page" do
     it "should have the content 'Help'" do
@@ -32,5 +31,4 @@ describe "Static pages" do
       expect(page).to have_title('| Contact')
     end
   end
-  
 end
